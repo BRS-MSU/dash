@@ -1,0 +1,3 @@
+width=1300
+height=400
+decorated=false
