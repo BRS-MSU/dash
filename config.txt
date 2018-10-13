@@ -1,3 +1,4 @@
+# On the RPi, width should be 1600, height should be 480, and decorated should be false
 width=1300
-height=400
-decorated=false
+height=440
+decorated=True
