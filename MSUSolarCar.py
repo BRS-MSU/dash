@@ -297,5 +297,7 @@ def main():
 
     applet.exec_()
 
+if __name__ == "__main__":
+    main()
 
-main()
+
