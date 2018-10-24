@@ -2,6 +2,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
+from DataManager import *
+
 
 ############################# Beginning of GUI code #################################
 
@@ -125,7 +127,7 @@ def create_and_show_gui(style, palette, prefs, handle):
     handle.batt_temp_display = batt_temp_display
     handle.left_turn_signal = left_turn_signal
     handle.right_turn_signal = right_turn_signal
-    
+
     return app
 
 
@@ -268,6 +270,7 @@ def load_preferences(path):
 class Handle(object):
     pass
 
+
 def main():
     prefs = load_preferences("config.txt")
     print("Dashboard controller for MSU Solar Car 2018-19")
@@ -278,6 +281,9 @@ def main():
 
     handle = Handle()
     applet = create_and_show_gui("", palette, prefs, handle)
+
+    data_manager = DataManager(handle);
+    data_manager.update_ui();
 
     '''
     The following values are references to GUI components
@@ -299,5 +305,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
