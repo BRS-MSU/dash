@@ -8,5 +8,3 @@ Current features:
 Needed features:
 * Interface with physical car components
 * Common networking / data format
-* switch range and total power
-* make mph bigger

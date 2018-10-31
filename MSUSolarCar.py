@@ -35,7 +35,7 @@ def create_and_show_gui(style, palette, prefs, handle):
     left_top_row = QWidget();
 
     power_display = DashDisplay("POWER - Kilowatts", "...", 0.9);
-    speed_display = DashDisplay("SPEED - MPH", "...")
+    speed_display = DashDisplay("SPEED - MPH", "...", 1.4)
     capacity_display = DashDisplay("CAPACITY - Percent", "...", 0.9);
 
     left_top_row_layout.addWidget(power_display)
@@ -76,13 +76,14 @@ def create_and_show_gui(style, palette, prefs, handle):
     right_top_row_layout.setContentsMargins(0, 0, 0, 0)
     right_top_row = QWidget()
 
-    solar_display = DashDisplay("Solar Power - Watts", "...", 0.7)
-    efficiency_display = DashDisplay("Watt Hrs per Mile", "...")
     range_display = DashDisplay("RANGE left - Miles", "...", 0.8)
+    efficiency_display = DashDisplay("Watt Hrs per Mile", "...")
+    solar_display = DashDisplay("Solar Power - Watts", "...", 0.7)
 
-    right_top_row_layout.addWidget(solar_display)
-    right_top_row_layout.addWidget(efficiency_display)
+
     right_top_row_layout.addWidget(range_display)
+    right_top_row_layout.addWidget(efficiency_display)
+    right_top_row_layout.addWidget(solar_display)
 
     right_top_row.setLayout(right_top_row_layout)
     right_main_layout.addWidget(right_top_row)
